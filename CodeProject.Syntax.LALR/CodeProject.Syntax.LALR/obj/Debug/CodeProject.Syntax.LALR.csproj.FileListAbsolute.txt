@@ -1,0 +1,9 @@
+H:\downloads\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\bin\Debug\CodeProject.Syntax.LALR.dll
+H:\downloads\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\bin\Debug\CodeProject.Syntax.LALR.pdb
+H:\downloads\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\obj\Debug\CodeProject.Syntax.LALR.csprojResolveAssemblyReference.cache
+H:\downloads\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\obj\Debug\CodeProject.Syntax.LALR.dll
+H:\downloads\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\obj\Debug\CodeProject.Syntax.LALR.pdb
+C:\xampp\htdocs\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\bin\Debug\CodeProject.Syntax.LALR.dll
+C:\xampp\htdocs\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\bin\Debug\CodeProject.Syntax.LALR.pdb
+C:\xampp\htdocs\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\obj\Debug\CodeProject.Syntax.LALR.dll
+C:\xampp\htdocs\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\obj\Debug\CodeProject.Syntax.LALR.pdb

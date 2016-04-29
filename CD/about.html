@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<link rel="about.css">
+<html>
+<head>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link href="css/style3.css" rel="stylesheet" type="text/css" media="all" />
+	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ <link rel="css/bootstrap.min.css">
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+
+	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+
+
+
+<script src="js/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/move-top.js">
+		</script>
+	
+
+	  <script src="js/bootstrap.min.js"></script>
+
+
+	<script type="text/javascript" src="js/wow.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+		</script>
+
+	<script>
+ new WOW().init();
+</script>
+
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+	
+}
+
+  </style>
+
+
+
+
+	
+	<title>CLR Parser</title>
+	<style type="text/css">
+.bgimg{
+	background-image: url(images/aboutimg.jpg);
+}
+
+	
+.button {
+    background-color:#A9F5F2;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+      position: absolute;
+ 
+}
+	
+.wrapper {
+    text-align: center;
+}
+</style>
+</head>
+
+
+<body>
+
+<header>
+		<div class="container">
+			<div class="logo pull-left animated wow fadeInLeft">
+				<img src="images/logo.jpg" height="80px"  width="65px" alt="" title="" >CLR PARSER				 
+			</div>
+
+		
+			<nav class="pull-right">
+				<ul class="list-unstyled">	
+				<li class="animated wow fadeInLeft" data-wow-delay=".1s"><a href="index.html">Home</a></li>
+					<li class="animated wow fadeInLeft" data-wow-delay=".1s"><a href="about.html">About</a></li>	
+					<li class="animated wow fadeInLeft" data-wow-delay=".1s"><a href="algo.html">Algorithm</a></li>				
+					<li class="animated wow fadeInLeft" data-wow-delay=".1s"><a href="http://github.com/deepakjayaprakash/Emulator-for-CLR-Parser">GitHub</a></li>
+					<li class="animated wow fadeInLeft" data-wow-delay=".1s"><a href="start.html">Start</a></li>
+				</ul>
+			</nav>
+
+			<span class="burger_icon">menu</span>
+		</div>
+	</header>
+	<!--  End Header Section  -->
+</body>
+
+<body class="bgimg">
+	<h2 style= "color:#F2F2F2; text-align:center ; font-family:verdana;"> 
+	<marquee behavior="scroll" direction="right">
+	INTRODUCTION TO CLR PARSING
+ </marquee>
+
+</h2>
+<br>
+<h3 style="color: #F6E3CE ;">
+	<blockquote>
+		<br>
+
+<ul>
+<li>The LR parser is a non-recursive, shift-reduce, bottom-up parser. 
+	It uses awide class of context-free grammar which makes it the most efficient syntax analysis technique. </li>
+<br>
+
+<li>LR parsers are also known as LR(k) parsers, 
+where L stands for left-to- right
+scanning of the input stream </li>
+<br>
+
+<li> R stands for the construction of right-most derivation
+in reverse, and k denotes the number of look ahead symbols 
+to make decisions. LR parsing does a rightmost derivation in reverse </li>
+<br>
+
+<li>LR(1) parser works on complete set of LR(1) grammar, 
+which makes full use of the look ahead symbols. 
+It generates a large table with a large number of states. </li>
+<br>
+
+<li>An LR(1) item is a two-component element of the form where 
+the first component is a marked production, called the core 
+of the item and the second is a look ahead
+character that belongs to the super set.</li>
+</ul>
+
+               <img src="images/parse.png" align="middle">
+	</blockquote>
+<br>
+<div class="wrapper">
+<form action="index.html" method="get">
+	<input type="submit" class="button" value="Home" name="Home" id="form_submit">
+</div>
+
+</body>

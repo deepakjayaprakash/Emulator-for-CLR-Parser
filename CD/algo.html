@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<link rel="about.css">
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ <link rel="css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link href="css/style3.css" rel="stylesheet" type="text/css" media="all" />
+
+<script src="js/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/move-top.js">
+		</script>
+	
+
+	  <script src="js/bootstrap.min.js"></script>
+
+
+	<script type="text/javascript" src="js/wow.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+		</script>
+
+	<script>
+ new WOW().init();
+</script>
+
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+	
+}
+
+  </style>
+
+	
+	<title>CLR Parser</title>
+	<style type="text/css">
+.bgimg{
+	background-image: url(images/aboutimg.jpg);
+}
+.button {
+    background-color:#A9F5F2;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+      position: absolute;
+ 
+}
+	
+.wrapper {
+    text-align: center;
+}
+</style>
+</head>
+
+
+
+
+<header>
+		<div class="container">
+			<div class="logo pull-left animated wow fadeInLeft">
+				<img src="images/logo.jpg" height="80px"  width="65px" alt="" title="" >CLR PARSER				 
+			</div>
+
+		
+			<nav class="pull-right">
+				<ul class="list-unstyled">	
+					<li class="animated wow fadeInLeft" data-wow-delay=".1s"><a href="about.html">About</a></li>	
+					<li class="animated wow fadeInLeft" data-wow-delay=".1s"><a href="algo.html">Algorithm</a></li>				
+					<li class="animated wow fadeInLeft" data-wow-delay=".1s"><a href="http://github.com/deepakjayaprakash/Emulator-for-CLR-Parser">GitHub</a></li>
+					<li class="animated wow fadeInLeft" data-wow-delay=".1s"><a href="start.html">Start</a></li>
+				</ul>
+			</nav>
+
+			<span class="burger_icon">menu</span>
+		</div>
+	</header>
+
+
+<body class="bgimg">
+	<h2 style= "color:#F2F2F2; text-align:center ; font-family:verdana;"> 
+	<marquee behavior="scroll" direction="right">
+	Algorithm for constructing LR(1) sets of items.
+ </marquee>
+
+</h2>
+<br>
+<h2 style="color: #F6E3CE ; text-align:center ; font-family:verdana;">
+	<blockquote>
+		<br>
+<pre>
+Input: An augmented grammar Gˡ.
+
+Output: The sets of LR(1) items that are the set of items valid for one
+
+or more viable prefixes of Gˡ.
+
+SetOfItems CLOSURE(I) {
+
+repeat
+
+for (each item [A→α.B𝛽,a] in I )
+
+for (each production B→ 𝛾 in Gˡ )
+
+for (each terminal b in FIRST(𝛽a) )
+
+add [B→. 𝛾,b] to set I;
+
+until no more items are added to I;
+
+return I;
+
+}
+
+SetOfItems GOTO(I,X) {
+
+initialize J to be the empty set;
+
+for (each item [A→α.X𝛽,a] in I )
+
+add item [A→αX.𝛽,a] to set J;
+
+return CLOSURE(J);
+
+}
+
+SetOfItems items(Gˡ) {
+
+initialize C to CLOSURE({[Sˡ→.S,$]});
+
+repeat
+
+for (each set of items I in C )
+
+for (each grammar symbol X )
+
+if (GOTO(I,X) is not empty and not in C )
+
+add GOTO(I,X) to C;
+
+until no new set of items are added to C;
+
+}
+</pre>
+	</blockquote>
+
+<br>
+<div class="wrapper">
+<form action="index.html" method="get">
+	<input type="submit" class="button" value="Home" name="Home" id="form_submit">
+</div>
+</body>
+</html>
