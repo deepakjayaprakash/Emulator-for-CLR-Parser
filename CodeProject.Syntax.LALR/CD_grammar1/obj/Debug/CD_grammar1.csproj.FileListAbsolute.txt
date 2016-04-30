@@ -11,6 +11,6 @@ C:\xampp\htdocs\CodeProject.Syntax.LALR\CD_grammar1\bin\Debug\CD_grammar1.exe
 C:\xampp\htdocs\CodeProject.Syntax.LALR\CD_grammar1\bin\Debug\CD_grammar1.pdb
 C:\xampp\htdocs\CodeProject.Syntax.LALR\CD_grammar1\bin\Debug\CodeProject.Syntax.LALR.dll
 C:\xampp\htdocs\CodeProject.Syntax.LALR\CD_grammar1\bin\Debug\CodeProject.Syntax.LALR.pdb
+C:\xampp\htdocs\CodeProject.Syntax.LALR\CD_grammar1\obj\Debug\CD_grammar1.csprojResolveAssemblyReference.cache
 C:\xampp\htdocs\CodeProject.Syntax.LALR\CD_grammar1\obj\Debug\CD_grammar1.exe
 C:\xampp\htdocs\CodeProject.Syntax.LALR\CD_grammar1\obj\Debug\CD_grammar1.pdb
-C:\xampp\htdocs\CodeProject.Syntax.LALR\CD_grammar1\obj\Debug\CD_grammar1.csprojResolveAssemblyReference.cache

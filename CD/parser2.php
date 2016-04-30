@@ -59,8 +59,6 @@ $(document).ready(function(){
 });
 </script>
 
-
-
   <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
@@ -83,6 +81,7 @@ $(document).ready(function(){
     padding: 60px;
     display: none;
 }
+
 
 
   </style>
@@ -113,76 +112,35 @@ $(document).ready(function(){
 	</header>
 	<!--  End Header Section  -->
 
-
-
- <div id="flip">Parsing Table</div>
+<div id="flip">Enter Input</div>
 <div id="panel">
 
 <?php
+$choice=$_REQUEST['parser'];
 
-/* 1-states
-2- terminals
-3- parsing table
-4-non terminals
-5- input parsing
-7- grammar
-*/
- 
-$choice=$_REQUEST['table'];
+?>
+ <form action="parser.php" method="POST">
+ Enter the input string:<input type="text" name="string">
 
-if($choice==1)
- $res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR/CD_grammar1/bin/Debug/CD_grammar1.exe 5 acede$");
-else if($choice==3)
-	$res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR2/CD_grammar1/bin/Debug/CD_grammar1.exe 5 abc$");
-else if($choice==2)
-	$res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR3/CD_grammar1/bin/Debug/CD_grammar1.exe 5 101$");
-
- //echo $res."</br><hr>";
-$split = array();
-$state = array();
-$temp = array();
- $split=explode("InputParsing", $res);
- //print_r( $split);
-
- $temp=explode("end", $split[0]);
-// print_r( $temp);
-
-echo '
-<div class="container">
-  <table class="table table-hover">
-  
-    <tbody>';
-
-    foreach ($temp as $key) {
-
-    	$temp2=array();
-   $temp2=explode("tt", $key);
- echo "<tr>";
-   foreach ($temp2 as $key2) {
-   	echo("<td>".$key2."</td> <br>");
-   }
-   echo "<tr>";
-  
-  }
+ <?php  
+ if($choice==1)
+ echo '<input type="hidden" name="parser" value="1" ><br><br>';
+ else if($choice==2)
+ echo '<input type="hidden" name="parser" value="2" ><br><br>';
+ else if($choice==3)
+ echo '<input type="hidden" name="parser" value="3" ><br><br>';
 
 
-
-   echo ('</tbody>
-  </table>
-</div>');
-
+  ?>
+  <button name="submit" >Submit</button>
+ </div></div>
 
 
- 	?>	
-
+ </form>
  </div>
  </div>
-
-
 
 </body>
 
 
 </html>
-
-

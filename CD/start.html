@@ -45,6 +45,23 @@
  new WOW().init();
 </script>
 
+
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+
+$(document).ready(function(){
+    $("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+    });
+});
+</script>
+
+
+
   <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
@@ -52,6 +69,26 @@
       margin: auto;
 	
 }
+
+#panel, #flip ,#panel2,#flip2{
+    padding: 30px;
+    text-align:center; 
+        background-color:#484848;  font-style:bold;
+        font-size: 14pt; letter-spacing: 6px;
+  color: Coral;
+   
+    border: solid 4px NavajoWhite;
+}
+
+#panel, #panel2{
+    padding: 60px;
+    display: none;
+}
+
+
+
+
+
 
   </style>
 
@@ -82,16 +119,22 @@
 	<!--  End Header Section  -->
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+
+<div id="flip">Choose Grammar</div>
+<div id="panel">
+
 <div class="banner2">
  <div class="container">
  <form action="menu.php" method="POST">
 
 <div class="banner-in col-md-3 pull-left animated wow fadeInLeft" data-wow-delay=".1s">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button name="first" value="1" style="background-color:SandyBrown;align=center;padding:20px;" >
-S-> AaAb/BbBa<br><br>
-A->&epsilon;<br><br>
-B->&epsilon;<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button name="first" value="1" style="background-color:SandyBrown;align=center;padding:20px;color:black;" >
+S -> aBde<br><br>
+B- > cC<br><br>
+C-> dD<br><br>
+C-> dD<br><br>
+D-> d<br><br>
 </button>
 </div>
 </form>
@@ -99,9 +142,9 @@ B->&epsilon;<br><br>
 <form action="menu.php" method="POST">
 <div class="banner-in col-md-3 pull-left animated wow fadeInLeft" data-wow-delay=".5s">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button name="first" value="2"  style="background-color:SandyBrown;align=center;padding:20px;" >
-S-> aAbA<br><br>
-A->Aabc<br><br>
-B->a<br><br>
+S-> 1B1<br><br>
+B->1B1<br><br>
+B->0<br><br>
 </button>
 
 </div>
@@ -111,11 +154,16 @@ B->a<br><br>
 
 <div class="banner-in col-md-3 pull-left animated wow fadeInLeft" data-wow-delay=".9s">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button name="first" value="3"  style="background-color:SandyBrown;align=center;padding:20px;" >
-S-> Aa/Ac<br><br>
-A->b;<br><br>
+S -> a A c<br><br>
+A ->  c A b<br><br>
+A -> b<br><br>
 </button>
 </div>
 </form>
+
+</div>
+</div>
+
 
 	<br><br><br><br><br><br><br><br><br><br><br><br>
 
@@ -129,10 +177,10 @@ A->b;<br><br>
 
 <div class="footer text-center">
 	 <div class="container">		
-		 <a class="wow bounceIn" data-wow-delay="0.5s" href="index.html"><img src="images/logo.jpg" width="67px" height="90px" alt=""/></a>	
+		 <a class="wow bounceIn" data-wow-delay="0.5s" href="index.html"></a>	
 		 <br>
 		 <br>	  <br>
-		 <p class="wow bounceIn" data-wow-delay="0.4s">Copyright &copy; Emulator for CLR Parser All rights reserved | Anvitha G K Bhat, Gayathri, Deepak Jayaprakash   </p><br>
+		 <p class="wow bounceIn" data-wow-delay="0.4s">Copyright &copy; Emulator for CLR Parser All rights reserved | Anvitha G K Bhat, Gayathri R, Deepak Jayaprakash   </p><br>
 		
 	 </div>
 </div>

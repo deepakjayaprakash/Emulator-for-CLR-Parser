@@ -45,6 +45,26 @@
  new WOW().init();
 </script>
 
+
+
+
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+
+$(document).ready(function(){
+    $("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+    });
+});
+</script>
+
+
+
+
   <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
@@ -52,6 +72,25 @@
       margin: auto;
 	
 }
+
+
+#panel, #flip ,#panel2,#flip2{
+    padding: 30px;
+    text-align:center; 
+        background-color:#484848;  font-style:bold;
+        font-size: 14pt; letter-spacing: 6px;
+  color: Coral;
+   
+    border: solid 4px NavajoWhite;
+}
+
+#panel, #panel2{
+    padding: 60px;
+    display: none;
+}
+
+
+
 
   </style>
 
@@ -81,8 +120,15 @@
 	</header>
 	<!--  End Header Section  -->
 
+
+
+
+
 <div class="banner2">
  <div class="container">
+
+ <div id="flip">Show Grammar</div>
+<div id="panel">
 
 <?php
 
@@ -96,7 +142,12 @@
 $choice=$_REQUEST['first'];
 
 
- $res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR/CD_grammar1/bin/Debug/CD_grammar1.exe 7");
+if($choice==1)
+ $res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR/CD_grammar1/bin/Debug/CD_grammar1.exe 7 acede$");
+else if($choice==3)
+	$res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR2/CD_grammar1/bin/Debug/CD_grammar1.exe 7 abc$");
+else if($choice==2)
+	$res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR3/CD_grammar1/bin/Debug/CD_grammar1.exe 7 101$");
 
 //echo $res."</br><hr>";
 $split = array();
@@ -125,18 +176,19 @@ echo '
 
    echo ('</tbody>
   </table>
-</div>');
+</div></div</div> <div id="flip2">Options</div>
+<div id="panel2"> ');
 
 
-print $choice;
+
 
 if($choice=='1'){
 	echo ' <form action="items.php">
-<button name="items" value="1">ItemSets</button></form>
+<button name="items" value="1">ItemSets</button></form><br><br>
 <form action="table.php">
-<button name="table" value="1">ParsingTable</button></form>
-<form action="parser.php">
-<button name="parser" value="1">InputParser</button></form>
+<button name="table" value="1">ParsingTable</button></form><br><br>
+<form action="parser2.php">
+<button name="parser" value="1">InputParser</button></form><br><br>
  </form>';
 
 }
@@ -144,23 +196,23 @@ if($choice=='1'){
 else if($choice==2)
 {
 	echo ' <form action="items.php">
-<button name="items" value="2">ItemSets</button></form>
+<button name="items" value="2">ItemSets</button></form><br><br>
 <form action="table.php">
-<button name="table" value="2">ParsingTable</button></form>
-<form action="parser.php">
-<button name="parser" value="2">InputParser</button></form>
+<button name="table" value="2">ParsingTable</button></form><br><br>
+<form action="parser2.php">
+<button name="parser" value="2">InputParser</button></form><br><br>
  </form>';
 
 }
 else if($choice==3)
 {
 	echo ' <form action="items.php">
-<button name="items" value="3">ItemSets</button></form>
+<button name="items" value="3">ItemSets</button></form><br><br>
 <form action="table.php">
-<button name="table" value="3">ParsingTable</button></form>
-<form action="parser.php">
-<button name="parser" value="3">InputParser</button></form>
- </form>';
+<button name="table" value="3">ParsingTable</button></form><br><br>
+<form action="parser2.php">
+<button name="parser" value="3">InputParser</button></form><br><br>
+ </form></div</div>';
 
 }
 

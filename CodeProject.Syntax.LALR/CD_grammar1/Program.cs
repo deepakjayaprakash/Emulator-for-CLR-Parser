@@ -58,7 +58,7 @@ namespace CD_grammar1
 
 
         //parsing function
-        static int parseString(string[,] parseTable,Grammar grammar, string str,string[,] parseInputTable)
+        static int parseString(string[,] parseTable, Grammar grammar, string str, string[,] parseInputTable)
         {
             //parseInputTable= new string[30,4];
             Stack<int> stack = new System.Collections.Generic.Stack<int>();
@@ -69,8 +69,8 @@ namespace CD_grammar1
             Production[] x = grammar.PrecedenceGroups[0].Productions;
             string[] token = grammar.Tokens;
             Console.WriteLine("InputParsing");
-            Console.WriteLine("Stack\tSymbol\tInput\tAction end");
-            parseInputTable[0, 0]= "Stack";
+            Console.WriteLine("Stack tt Symbol tt Input tt Action end");
+            parseInputTable[0, 0] = "Stack";
             parseInputTable[0, 1] = "Symbol";
             parseInputTable[0, 2] = "Input";
             parseInputTable[0, 3] = "Action";
@@ -83,7 +83,7 @@ namespace CD_grammar1
                 if (stack.Count != 0)
                 {
                     string temp;
-                    temp=print(stack);
+                    temp = print(stack);
                     if (stack.Count > 2)
                     {
                         temp += stack.Peek();
@@ -93,11 +93,11 @@ namespace CD_grammar1
                 }
                 else
                     Console.Write("");
-                Console.Write("\t");
+                Console.Write("tt");
                 if (symbol.Count != 0)
                 {
                     string temp;
-                    temp=print(symbol);
+                    temp = print(symbol);
                     if (symbol.Count > 2)
                     {
                         Console.Write(symbol.Peek());
@@ -107,7 +107,7 @@ namespace CD_grammar1
                 }
                 else
                     Console.Write("");
-                Console.Write("\t");
+                Console.Write("tt");
                 Console.Write(str.Substring(inp_pointer, str.Length - inp_pointer));
                 parseInputTable[l, 2] = str.Substring(inp_pointer, str.Length - inp_pointer);
 
@@ -127,7 +127,7 @@ namespace CD_grammar1
 
                     symbol.Push(str[inp_pointer].ToString());
                     inp_pointer++;
-                    Console.WriteLine("\tShift " + state+" end");
+                    Console.WriteLine("tt Shift " + state + " end");
                     parseInputTable[l, 3] = "\tShift " + state;
 
                 }
@@ -147,12 +147,12 @@ namespace CD_grammar1
                     {
                         Console.WriteLine("\n Input parsed!!");
                         return 1;
-                       // break;
+                        // break;
                     }
                     string temp = parseTable[stack.Peek() + 1, token_inserted + 2];
                     int state_inserted = Int32.Parse(temp[2].ToString());
                     stack.Push(state_inserted);
-                    Console.WriteLine("\tReduce " + prod_no+" end");
+                    Console.WriteLine("tt Reduce " + prod_no + " end");
                     parseInputTable[l, 3] = "\tReduce " + prod_no;
 
                 }
@@ -165,6 +165,7 @@ namespace CD_grammar1
 
             }
         }
+
 
 
         //printing grammar
@@ -208,8 +209,9 @@ namespace CD_grammar1
 
     */
 
+
             Grammar grammar = new Grammar();
-            grammar.Tokens = new string[] { "S", "C", "c", "d"};
+            grammar.Tokens = new string[] { "S", "B", "C", "D", "a", "c", "d", "e" };
 
             grammar.PrecedenceGroups = new PrecedenceGroup[]
             {
@@ -218,56 +220,64 @@ namespace CD_grammar1
                     Derivation = Derivation.None,
                     Productions = new Production[]
                     {
-						//S -> C C
+						//S -> aBde
 						new Production{
                             Left = 0,
-                            Right = new int[]{1 , 1}
+                            Right = new int[]{4 , 1, 6,7}
                         },
-						//C -> c C
+						//B- > cC
 						new Production{
                             Left = 1,
-                            Right = new int[]{2 , 1}
+                            Right = new int[]{5 , 2 }
                         },
-						//C -> d
+						//C-> dD
 						new Production{
-                            Left = 1,
-                            Right =  new int[]{3}
+                            Left = 2,
+                            Right =  new int[]{6,3}
+                        },
+                        new Production{
+                            Left = 2,
+                            Right =  new int[]{7}
+                        },
+                         new Production{
+                            Left = 3,
+                            Right =  new int[]{6}
                         }
                     }
                 }
             };
 
-            
-/*
-            Grammar grammar1 = new Grammar();
-            grammar1.Tokens = new string[] { "S", "A", "a", "b", "c"};
 
-            grammar1.PrecedenceGroups = new PrecedenceGroup[]
-            {
-                new PrecedenceGroup
-                {
-                    Derivation = Derivation.None,
-                    Productions = new Production[]
-                    {
-						//S -> a A b A
-						new Production{
-                            Left = 0,
-                            Right = new int[]{2 , 1 , 3, 1}
-                        },
-						//S -> a A b c
-						new Production{
-                            Left = 0,
-                            Right = new int[]{2 , 1, 3, 4}
-                        },
-						//A -> a
-						new Production{
-                            Left = 1,
-                            Right =  new int[]{2}
-                        }
-                    }
-                }
-            };
-*/
+            /*
+                        Grammar grammar1 = new Grammar();
+                        grammar1.Tokens = new string[] { "S", "A", "a", "b", "c"};
+
+                        grammar1.PrecedenceGroups = new PrecedenceGroup[]
+                        {
+                            new PrecedenceGroup
+                            {
+                                Derivation = Derivation.None,
+                                Productions = new Production[]
+                                {
+                                    //S -> a A b A
+                                    new Production{
+                                        Left = 0,
+                                        Right = new int[]{2 , 1 , 3, 1}
+                                    },
+                                    //S -> a A b c
+                                    new Production{
+                                        Left = 0,
+                                        Right = new int[]{2 , 1, 3, 4}
+                                    },
+                                    //A -> a
+                                    new Production{
+                                        Left = 1,
+                                        Right =  new int[]{2}
+                                    }
+                                }
+                            }
+                        };
+            */
             /*
             Grammar grammar2 = new Grammar();
             grammar.Tokens = new string[] { "S", "A", "a", "b", "c" };
@@ -298,8 +308,8 @@ namespace CD_grammar1
                 }
             };
 */
-          //  Console.WriteLine(args[1]);
-            
+            //  Console.WriteLine(args[1]);
+
 
             // generate the parse table
             Parser parser;
@@ -358,15 +368,15 @@ namespace CD_grammar1
                     for (int j = 0; j < nTokens; j++)
                     {
                         if (parseTable[i, j] == " ")
-                            Console.Write("blank\t\t");
+                            Console.Write("bltt");
                         else
-                        Console.Write(parseTable[i, j] + "\t\t");
+                        Console.Write(parseTable[i, j] + "tt");
                     }
                     Console.WriteLine("end");
                 }
             }
             
-string str = "cdcd$";
+string str = args[1];
             int status;
             string[,] parseInputTable=new string[30,4];
             status=parseString(parseTable, grammar, str, parseInputTable);

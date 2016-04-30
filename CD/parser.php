@@ -45,6 +45,22 @@
  new WOW().init();
 </script>
 
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+
+$(document).ready(function(){
+    $("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+    });
+});
+</script>
+
+
+
   <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
@@ -52,6 +68,28 @@
       margin: auto;
 	
 }
+
+
+
+#panel, #flip ,#panel2,#flip2{
+    padding: 30px;
+    text-align:center; 
+        background-color:#484848;  font-style:bold;
+        font-size: 14pt; letter-spacing: 6px;
+  color: Coral;
+   
+    border: solid 4px NavajoWhite;
+}
+
+#panel, #panel2{
+    padding: 60px;
+    display: none;
+}
+
+
+
+
+
 
   </style>
 
@@ -84,6 +122,9 @@
 <div class="banner2">
  <div class="container">
 
+<div id="flip">Input Parsing </div>
+<div id="panel">
+
 <?php
 
 /* 1-states
@@ -93,12 +134,18 @@
 5- input parsing
 7- grammar
 */
- $res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR/CD_grammar1/bin/Debug/CD_grammar1.exe 2");
-// echo $res."</br><hr>";
+$choice=$_REQUEST['parser'];
+$str=$_REQUEST['string'];
 
+echo "Input String :".$str;
 
- $res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR/CD_grammar1/bin/Debug/CD_grammar1.exe 2");
-// echo $res."</br><hr>";
+if($choice==1)
+ $res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR/CD_grammar1/bin/Debug/CD_grammar1.exe 3 ".$str);
+else if($choice==3)
+	$res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR2/CD_grammar1/bin/Debug/CD_grammar1.exe 3 ".$str);
+else if($choice==2)
+	$res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR3/CD_grammar1/bin/Debug/CD_grammar1.exe 3 ".$str);
+
 $split = array();
 $state = array();
 $temp = array();
@@ -112,15 +159,22 @@ $split=explode("InputParsing", $res);
  // print_r( $state);
  echo '
 <div class="container">
-  <h2>Items</h2>
+
   <table class="table table-hover">
   
 
    
     <tbody>';
 
-  foreach ($temp as $key) {
-  	echo("<tr><td>".$key."</td> </tr><br>");
+    foreach ($temp as $key) {
+
+    	$temp2=array();
+   $temp2=explode("tt", $key);
+ echo "<tr>";
+   foreach ($temp2 as $key2) {
+   	echo("<td>".$key2."</td> <br>");
+   }
+   echo "<tr>";
   
   }
 
@@ -131,9 +185,10 @@ $split=explode("InputParsing", $res);
 
 
  	?>	
- <form action="parse.php">
-<button name="menu" value=""></button>
- </form>
+
+ </div>
+ </div>
+
  </div>
  </div>
 

@@ -45,6 +45,24 @@
  new WOW().init();
 </script>
 
+
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+
+$(document).ready(function(){
+    $("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+    });
+});
+</script>
+
+
+
+
   <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
@@ -52,6 +70,24 @@
       margin: auto;
 	
 }
+
+
+#panel, #flip ,#panel2,#flip2{
+    padding: 30px;
+    text-align:center; 
+        background-color:#484848;  font-style:bold;
+        font-size: 14pt; letter-spacing: 6px;
+  color: Coral;
+   
+    border: solid 4px NavajoWhite;
+}
+
+#panel, #panel2{
+    padding: 60px;
+    display: none;
+}
+
+
 
   </style>
 
@@ -84,6 +120,9 @@
 <div class="banner2">
  <div class="container">
 
+ <div id="flip">LR(1) item sets generated</div>
+<div id="panel">
+
 <?php
 
 /* 1-states
@@ -93,8 +132,17 @@
 5- input parsing
 7- grammar
 */
- $res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR/CD_grammar1/bin/Debug/CD_grammar1.exe 1");
-//echo $res."</br><hr>";
+$choice=$_REQUEST['items'];
+
+if($choice==1)
+ $res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR/CD_grammar1/bin/Debug/CD_grammar1.exe 1 acede$");
+else if($choice==3)
+	$res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR2/CD_grammar1/bin/Debug/CD_grammar1.exe 1 abc$");
+else if($choice==2)
+	$res=shell_exec("C:/xampp/htdocs/CodeProject.Syntax.LALR3/CD_grammar1/bin/Debug/CD_grammar1.exe 1 101$");
+
+
+
 $split = array();
 $state = array();
 $temp = array();
@@ -132,7 +180,8 @@ echo '
 
 
  	?>	
-
+</div>
+</div>
  </div>
  </div>
 
