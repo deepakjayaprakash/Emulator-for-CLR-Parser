@@ -1,0 +1,14 @@
+H:\downloads\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\TestProject\bin\Debug\TestProject.exe
+H:\downloads\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\TestProject\bin\Debug\TestProject.pdb
+H:\downloads\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\TestProject\bin\Debug\CodeProject.Syntax.LALR.dll
+H:\downloads\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\TestProject\bin\Debug\CodeProject.Syntax.LALR.pdb
+H:\downloads\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\TestProject\obj\x86\Debug\TestProject.csprojResolveAssemblyReference.cache
+H:\downloads\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\TestProject\obj\x86\Debug\TestProject.exe
+H:\downloads\CodeProject.Syntax.LALR\CodeProject.Syntax.LALR\TestProject\obj\x86\Debug\TestProject.pdb
+C:\xampp\htdocs\CodeProject.Syntax.LALR\TestProject\bin\Debug\TestProject.exe
+C:\xampp\htdocs\CodeProject.Syntax.LALR\TestProject\bin\Debug\TestProject.pdb
+C:\xampp\htdocs\CodeProject.Syntax.LALR\TestProject\bin\Debug\CodeProject.Syntax.LALR.dll
+C:\xampp\htdocs\CodeProject.Syntax.LALR\TestProject\bin\Debug\CodeProject.Syntax.LALR.pdb
+C:\xampp\htdocs\CodeProject.Syntax.LALR\TestProject\obj\x86\Debug\TestProject.csprojResolveAssemblyReference.cache
+C:\xampp\htdocs\CodeProject.Syntax.LALR\TestProject\obj\x86\Debug\TestProject.exe
+C:\xampp\htdocs\CodeProject.Syntax.LALR\TestProject\obj\x86\Debug\TestProject.pdb

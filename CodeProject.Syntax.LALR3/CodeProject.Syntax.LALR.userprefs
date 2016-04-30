@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestProject/Main.cs">
+    <Files>
+      <File FileName="CodeProject.Syntax.LALR/Debug.cs" Line="46" Column="11" />
+      <File FileName="TestProject/Main.cs" Line="12" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/phillipvoyle/Documents/Projects/CodeProject.Syntax.LALR/CodeProject.Syntax.LALR/AssemblyInfo.cs" line="14" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
